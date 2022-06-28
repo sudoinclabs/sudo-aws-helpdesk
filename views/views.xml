@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+  <!-- Inherit Form View to Modify it -->
+  <record id="helpdesk_ticket_inherit_aws" model="ir.ui.view">
+      <field name="name">Inherit Helpdesk Ticket</field>
+      <field name="model">helpdesk.ticket</field>
+      <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+       <field name="arch" type="xml">
+          <xpath expr="//field[@name='tag_ids']" position="after">
+            <field name="aws_ticket_number"/>
+          </xpath>
+      </field>
+  </record>
+  </data>
+</odoo>
